@@ -14,7 +14,7 @@ $$dS = rSdt + \sigma SdW $$
 ## Step 3: The Numerical Methodology
 We can use *Monte Carlo Simulation* as a means to compute the value of the discounted expected payoff. This is will end up being our premium value for the option: 
 
-$$\pi = exp(-rT) * E^Q[H(S_T)] $$ 
+$$\pi = exp(-rT) \times E^Q[H(S_T)] $$ 
 
 ## Step 4: The Algorithm
 
