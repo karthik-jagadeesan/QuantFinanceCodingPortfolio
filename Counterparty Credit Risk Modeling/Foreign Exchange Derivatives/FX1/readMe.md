@@ -36,7 +36,7 @@ $$\pi = V(S\_0, 0)$$
     ```plaintext
     for j=0 to M-2
         for i=1 to N-2
-            * compute FDM stencil for each internal node
+            *compute FDM stencil for each internal node
         end i
     end j
     ```
