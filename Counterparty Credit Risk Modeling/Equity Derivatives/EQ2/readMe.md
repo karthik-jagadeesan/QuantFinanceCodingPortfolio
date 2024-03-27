@@ -15,7 +15,7 @@ $$dS2 = rS2dt + \sigma_2 S2dW_2 $$
 ## Step 3: The Numerical Methodology
 We enforce *Monte Carlo Simulation* to compute the value of the discounted expected payoff of the contract :
 
-$$\pi = exp(-rT) * E^Q[H(S1_T, S2_T)] $$
+$$\pi = exp(-rT) \times E^Q[H(S1_T, S2_T)] $$
 
 ## Step 4: The Algorithm
 - **STEP 1:** INPUT PARAMETERS
