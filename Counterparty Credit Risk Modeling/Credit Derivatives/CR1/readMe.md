@@ -2,9 +2,9 @@
 Here we examine and model the default of a firm using the Merton model. Under this idea, the dynamics of the firm obeys the following 
 properties for simplicity : 
 
-**- Firm's assets $(V)$ is composed only of equity $(E)$ and debt $(D)$**
+  **- Firm's assets $(V)$ is composed only of equity $(E)$ and debt $(D)$**
 
-**- Under timeframe to maturity $(T)$, the defualt event for the firm occurs when the assets under the firm at maturity 
+  **- Under timeframe to maturity $(T)$, the defualt event for the firm occurs when the assets under the firm at maturity 
 $V(T)$ are lower than the value of the debt $(D)$ that the firm is obligated to pay at that time**
 
 Furthermore, we can examine the probability of the firm's default by enforcing the Monte Carlo Simulation. By doing so, we 
