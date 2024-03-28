@@ -1,5 +1,5 @@
 # (Basic Demonstration) - Bankruptcy
-Here we examine and model the default of a firm using the Merton model. Under this idea, the dynamics of the firm obeys the following 
+Here we examine and model the default event for a firm using the Merton model. Under this idea, the dynamics of the firm obeys the following 
 properties for simplicity : 
 
   **- Firm's assets $(V)$ is composed only of equity $(E)$ and debt $(D)$**
