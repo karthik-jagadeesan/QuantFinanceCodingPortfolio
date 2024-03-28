@@ -15,8 +15,7 @@ bankruptcy of the firm.
 ## Step 1 : The Derivative Contract
 
 The firm's assets $(V)$ are the sum of the firm's equity $(E)$ and it's debt $(D)$. Default condition is met when $V(T) < D(T)$, observed
-at maturity. Under Merton's model, he believed that the firm's equity with said characteristics is essentially a European Call
-Option with the following payoff function : 
+at maturity. Under Merton's model, it is believed that the firm's equity with said characteristics is essentially a European Call Option with the following payoff function : 
 
 $$H(V_T) = max(V_T - D, 0)$$
 
