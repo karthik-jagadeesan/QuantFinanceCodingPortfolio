@@ -2,6 +2,7 @@
 In this initial instance, we explore the valuation of a vanilla European Call option. 
 Although this example may seem straightforward, it holds significant importance as it lays the foundation for solving more complex option pricing challenges using Monte Carlo simulation.
 
+
 ## Step 1: The Derivative Contract
 European Call option for Barclays Bank PLC stock involving counterparties A and B. The underlying asset is Barclays stock. At time $t=0$, party A pays party B a *premium*. At maturity $(T=1 year)$, party A holds the right (but not the obligation) to purchase the underlying asset from party B at the strike price $K$. The payoff at maturity, denoted as $H$, is described as follows:
 
