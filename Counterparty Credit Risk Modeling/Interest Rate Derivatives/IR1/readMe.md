@@ -15,7 +15,7 @@ Under the purview of the *Libor Market Model* the floating rates can be characte
 $$ dL_i = \mu L_idt + \sigma L_i dW $$
 
 ## Step 3: The Numerical Methodology
-Here we enforce *Monte Carlo Simulation* as a means for computing the value pertaining to the forwards rates using the *Pelsser Tableau*
+Here we enforce *Monte Carlo Simulation* as a means for computing the value pertaining to the forwards rates.
 
 
 ## Step 4: The Algorithm
