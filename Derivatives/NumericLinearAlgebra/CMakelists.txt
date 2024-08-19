@@ -1,0 +1,30 @@
+# Minimum CMake version required
+cmake_minimum_required(VERSION 3.10)
+
+# Project name
+project(NumericLinearAlgebra)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Find Eigen3 package
+find_package(Eigen3 REQUIRED)
+
+# Add executables for each self-contained Eigen-based file
+add_executable(EigenCholeskyDecomposition eigen_cholesky_decomposition.cpp)
+add_executable(EigenLUDecomposition eigen_lu_decomposition.cpp)
+add_executable(EigenQRDecomposition eigen_qr_decomposition.cpp)
+add_executable(ThomasAlgorithm thomas.cpp)
+
+# Link Eigen3 libraries to each executable that requires Eigen
+target_link_libraries(EigenCholeskyDecomposition PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenLUDecomposition PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenQRDecomposition PRIVATE Eigen3::Eigen)
+target_link_libraries(ThomasAlgorithm PRIVATE Eigen3::Eigen)
+
+# Include directories (for your headers)
+target_include_directories(EigenCholeskyDecomposition PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenLUDecomposition PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenQRDecomposition PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(ThomasAlgorithm PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
