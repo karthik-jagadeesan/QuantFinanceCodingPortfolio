@@ -1,0 +1,20 @@
+# Ignore build artifacts
+/build/
+/Derivatives/**/build/
+/CMakeFiles/
+/CMakeCache.txt
+/Makefile
+/CMakeLists.txt.user
+*.o
+*.a
+*.so
+*.exe
+*.dll
+*.log
+
+# Ignore VSCode settings
+/.vscode/
+
+# Ignore other temporary files
+*.swp
+*.tmp
