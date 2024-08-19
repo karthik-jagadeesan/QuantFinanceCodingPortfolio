@@ -1,0 +1,20 @@
+# Minimum CMake version required
+cmake_minimum_required(VERSION 3.10)
+
+# Project name
+project(EuropeanOptionsMonteCarlo)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add executables for each file
+add_executable(EuropeanAnalytic european_analytic.cpp)
+add_executable(EuropeanMonteCarlo european_monte_carlo.cpp)
+
+# Include directories (if needed)
+target_include_directories(EuropeanAnalytic PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EuropeanMonteCarlo PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Link libraries (if needed)
+# No additional libraries needed as it only uses standard C++ libraries
