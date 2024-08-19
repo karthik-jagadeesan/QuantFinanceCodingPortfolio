@@ -1,0 +1,22 @@
+# Minimum CMake version required
+cmake_minimum_required(VERSION 3.10)
+
+# Project name
+project(OptionGreeks)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add executables for each file
+add_executable(AnalyticMain analytic_main.cpp black_scholes.h)
+add_executable(FDMMain fdm_main.cpp black_scholes.h)
+add_executable(MCMain mc_main.cpp black_scholes.h)
+
+# Include directories (if needed)
+target_include_directories(AnalyticMain PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(FDMMain PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(MCMain PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+# Link libraries (if needed)
+# No additional libraries needed as it only uses standard C++ libraries
