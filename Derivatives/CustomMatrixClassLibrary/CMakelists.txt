@@ -1,0 +1,40 @@
+# Minimum CMake version required
+cmake_minimum_required(VERSION 3.10)
+
+# Project name
+project(CustomMatrixClassLibrary)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Find Eigen3 package
+find_package(Eigen3 REQUIRED)
+
+# Add the main executable (matrix-related)
+add_executable(MatrixMain main.cpp matrix.cpp)
+
+# Add executables for each self-contained Eigen-based file
+add_executable(EigenMatrixMatrix eigen_matrix_matrix.cpp)
+add_executable(EigenMatrixReduction eigen_matrix_reduction.cpp)
+add_executable(EigenMatrixScalarArithmetic eigen_matrix_scalar_arithmetic.cpp)
+add_executable(EigenMatrixScalarMultDiv eigen_matrix_scalar_mult_div.cpp)
+add_executable(EigenMatrixTransposition eigen_matrix_transposition.cpp)
+add_executable(EigenMatrixVector eigen_matrix_vector.cpp)
+
+# Link Eigen3 libraries to each executable that requires Eigen
+target_link_libraries(EigenMatrixMatrix PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenMatrixReduction PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenMatrixScalarArithmetic PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenMatrixScalarMultDiv PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenMatrixTransposition PRIVATE Eigen3::Eigen)
+target_link_libraries(EigenMatrixVector PRIVATE Eigen3::Eigen)
+
+# Include directories (for your headers)
+target_include_directories(MatrixMain PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenMatrixMatrix PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenMatrixReduction PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenMatrixScalarArithmetic PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenMatrixScalarMultDiv PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenMatrixTransposition PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(EigenMatrixVector PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
